@@ -38,6 +38,18 @@ ead:
     exchange:
       userEvent: ead.userevent
 
+authuser:
+  refreshscope:
+    name: Ramon Silva
+
+management:
+  endpoints:
+    web:
+      exposures:
+        include:
+          - refresh
+          - health    
+
 resilience4j:
   circuitbreaker:
     instances:
