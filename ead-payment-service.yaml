@@ -1,0 +1,15 @@
+server:
+  port: 8086
+
+spring:
+  application:
+    name: ead-payment-service
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - refresh
+          - health
+
