@@ -1,9 +1,37 @@
 server:
   port: 8084
+  servlet:
+    context-path: '/ead-notification-service/'
 
 spring:
   application:
     name: ead-notification-service
+  datasource:
+    url:  jdbc:postgresql://localhost:5432/ead-notification-v2
+    username: postgres
+    password: admin
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show_sql: true
+    properties:
+      hibernate:
+        jdbc:
+          lob.non-contextual-creation: true
+  output:
+    ansi:
+      enabled: always
+  rabbitmq:
+    addresses: amqps://beugxnyy:Fc9DwOEnSkBg4ymBmQ76lxBJCprVaubq@beaver.rmq.cloudamqp.com/beugxnyy
+
+logging:
+  level:
+    com.ead: TRACE
+    root: INFO
+    org.springframework.web: DEBUG
+    org.hibernate: INFO
+
+#broker props    
 
 management:
   endpoints:
