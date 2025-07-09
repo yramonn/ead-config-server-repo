@@ -22,6 +22,13 @@ spring:
   rabbitmq:
     addresses: amqps://beugxnyy:Fc9DwOEnSkBg4ymBmQ76lxBJCprVaubq@beaver.rmq.cloudamqp.com/beugxnyy
 
+ead:
+  broker:
+    exchange:
+      userEventExchange: ead.userevent
+    queue:
+      userEventQueue: ead.userevent.ms.payment    
+
 logging:
   level:
     com.ead: TRACE
