@@ -5,7 +5,7 @@ spring:
   application:
     name: ead-payment-service
   datasource:
-    url:  jdbc:postgresql://localhost:5432/ead-notification-v2
+    url:  jdbc:postgresql://localhost:5432/ead-payment-v2
     username: postgres
     password: admin
   jpa:
