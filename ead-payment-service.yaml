@@ -1,13 +1,11 @@
 server:
   port: 8086
-servlet:
-    context-path: '/ead-payment-service/'  
 
 spring:
   application:
     name: ead-payment-service
   datasource:
-    url:  jdbc:postgresql://localhost:5432/ead-payment-v2
+    url:  jdbc:postgresql://localhost:5432/ead-notification-v2
     username: postgres
     password: admin
   jpa:
@@ -28,8 +26,14 @@ ead:
   broker:
     exchange:
       userEventExchange: ead.userevent
+      paymentCommandExchange: ead.paymentcommand
     queue:
-      userEventQueue: ead.userevent.ms.payment    
+      userEventQueue:
+        name: ead.userevent.ms.payment
+      paymentCommandQueue:
+        name: ead.paymentcommand.ms.payment
+    key:
+      paymentCommandKey: ms.payment    
 
 logging:
   level:
