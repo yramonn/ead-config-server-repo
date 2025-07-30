@@ -19,4 +19,8 @@ spring:
           - id: ead-notification-service
             uri: lb://EAD-NOTIFICATION-SERVICE
             predicates:
-              - Path=/ead-notification-service/**    
+              - Path=/ead-notification-service/**
+          - id: ead-payment-service
+            uri: lb://EAD-PAYMENT-SERVICE
+            predicates:
+              - Path=/ead-payment-service/**  
